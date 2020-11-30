@@ -7,7 +7,7 @@
 <h1>Gods</h1>
 
 <div class="card-deck">
-    @foreach (var god in ApiCall.GetGodsInfo())
+    @foreach (var god in Smite.gods)
     {
         <div class="card border-dark mb-3">
             <img class="card-img-top" src="@god.godCard_URL" />
@@ -16,4 +16,6 @@
             </div>
         </div>
     }
+
+    <img src="@Smite.godsDictionary["Achilles"].godCard_URL"/>
 </div>

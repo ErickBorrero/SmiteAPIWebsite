@@ -7,7 +7,7 @@
 <h1>Items</h1>
 
 <div class="card-deck">
-    @foreach (var item in ApiCall.GetItems())
+    @foreach (var item in Smite.items)
     {
         <div class="card border-dark mb-3">
             <img class="card-img-top" src="@item.itemIcon_URL" />
