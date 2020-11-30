@@ -1,0 +1,19 @@
+﻿@model IEnumerable<SmiteAPIWebsite.ItemsInfo>
+
+@{
+    ViewData["Title"] = "Items";
+}
+
+<h1>Items</h1>
+
+<div class="card-deck">
+    @foreach (var item in ApiCall.GetItems())
+    {
+        <div class="card border-dark mb-3">
+            <img class="card-img-top" src="@item.itemIcon_URL" />
+            <div class="card-body">
+                <h5 class="card-title">@item.DeviceName</h5>
+            </div>
+        </div>
+    }
+</div>
