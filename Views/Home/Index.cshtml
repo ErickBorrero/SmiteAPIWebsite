@@ -27,7 +27,7 @@
         }
 
             .searchTerm:focus {
-                color: #00B4CC;
+                color: black;
             }
 
         .searchButton {
@@ -43,7 +43,7 @@
         }
 
         .wrap {
-            width: 30%;
+            width: 50%;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -53,14 +53,17 @@
 </head>
 <body>
     <div id="background"> </div>
-    <div class="text-center">
-        <h1 class="display-4">Step Into The Battleground Of The Gods!</h1>
+    <div class="row">
+        <div class="col-md-12 d-flex justify-content-center">
+            <h1 class="display-4">Step Into The Battleground Of The Gods!</h1>
+        </div>
     </div>
+    
     <div class="row">
         <div class="col-md-12 d-flex justify-content-center">
                 <div class="wrap">
                     <div class="search">
-                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <input type="text" class="searchTerm" placeholder="Enter player name or Gamertag">
                         <button type="submit" class="searchButton">
                             <i class="fa fa-search"></i>
                         </button>

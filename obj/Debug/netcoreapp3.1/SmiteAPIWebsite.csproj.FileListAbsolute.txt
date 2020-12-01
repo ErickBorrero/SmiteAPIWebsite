@@ -110,3 +110,4 @@ C:\Users\nuryn\Desktop\CodingProjects\SmiteAPIWebsite\obj\Debug\netcoreapp3.1\Sm
 C:\Users\nuryn\Desktop\CodingProjects\SmiteAPIWebsite\obj\Debug\netcoreapp3.1\SmiteAPIWebsite.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\nuryn\Desktop\CodingProjects\SmiteAPIWebsite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Items.cshtml.g.cs
 C:\Users\nuryn\Desktop\CodingProjects\SmiteAPIWebsite\obj\Debug\netcoreapp3.1\Razor\Views\Home\Gods.cshtml.g.cs
+C:\Users\nuryn\Desktop\CodingProjects\SmiteAPIWebsite\obj\Debug\netcoreapp3.1\Razor\Views\Home\PlayerSummary.cshtml.g.cs

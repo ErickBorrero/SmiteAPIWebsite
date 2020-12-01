@@ -38,6 +38,11 @@ namespace SmiteAPIWebsite.Controllers
             return View();
         }
 
+        public IActionResult PlayerSummary()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

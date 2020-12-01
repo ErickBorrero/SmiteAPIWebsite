@@ -1,0 +1,183 @@
+﻿@model SmiteAPIWebsite.PlayerInfo
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<h4>PlayerInfo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PlayerSummary">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ActivePlayerId" class="control-label"></label>
+                <input asp-for="ActivePlayerId" class="form-control" />
+                <span asp-validation-for="ActivePlayerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avatar_URL" class="control-label"></label>
+                <input asp-for="Avatar_URL" class="form-control" />
+                <span asp-validation-for="Avatar_URL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Created_Datetime" class="control-label"></label>
+                <input asp-for="Created_Datetime" class="form-control" />
+                <span asp-validation-for="Created_Datetime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoursPlayed" class="control-label"></label>
+                <input asp-for="HoursPlayed" class="form-control" />
+                <span asp-validation-for="HoursPlayed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Login_Datetime" class="control-label"></label>
+                <input asp-for="Last_Login_Datetime" class="form-control" />
+                <span asp-validation-for="Last_Login_Datetime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Leaves" class="control-label"></label>
+                <input asp-for="Leaves" class="form-control" />
+                <span asp-validation-for="Leaves" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level" class="control-label"></label>
+                <input asp-for="Level" class="form-control" />
+                <span asp-validation-for="Level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Losses" class="control-label"></label>
+                <input asp-for="Losses" class="form-control" />
+                <span asp-validation-for="Losses" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasteryLevel" class="control-label"></label>
+                <input asp-for="MasteryLevel" class="form-control" />
+                <span asp-validation-for="MasteryLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MinutesPlayed" class="control-label"></label>
+                <input asp-for="MinutesPlayed" class="form-control" />
+                <span asp-validation-for="MinutesPlayed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Personal_Status_Message" class="control-label"></label>
+                <input asp-for="Personal_Status_Message" class="form-control" />
+                <span asp-validation-for="Personal_Status_Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Platform" class="control-label"></label>
+                <input asp-for="Platform" class="form-control" />
+                <span asp-validation-for="Platform" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rank_Stat_Conquest" class="control-label"></label>
+                <input asp-for="Rank_Stat_Conquest" class="form-control" />
+                <span asp-validation-for="Rank_Stat_Conquest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rank_Stat_Conquest_Controller" class="control-label"></label>
+                <input asp-for="Rank_Stat_Conquest_Controller" class="form-control" />
+                <span asp-validation-for="Rank_Stat_Conquest_Controller" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rank_Stat_Duel" class="control-label"></label>
+                <input asp-for="Rank_Stat_Duel" class="form-control" />
+                <span asp-validation-for="Rank_Stat_Duel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rank_Stat_Duel_Controller" class="control-label"></label>
+                <input asp-for="Rank_Stat_Duel_Controller" class="form-control" />
+                <span asp-validation-for="Rank_Stat_Duel_Controller" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rank_Stat_Joust" class="control-label"></label>
+                <input asp-for="Rank_Stat_Joust" class="form-control" />
+                <span asp-validation-for="Rank_Stat_Joust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rank_Stat_Joust_Controller" class="control-label"></label>
+                <input asp-for="Rank_Stat_Joust_Controller" class="form-control" />
+                <span asp-validation-for="Rank_Stat_Joust_Controller" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Region" class="control-label"></label>
+                <input asp-for="Region" class="form-control" />
+                <span asp-validation-for="Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamId" class="control-label"></label>
+                <input asp-for="TeamId" class="form-control" />
+                <span asp-validation-for="TeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team_Name" class="control-label"></label>
+                <input asp-for="Team_Name" class="form-control" />
+                <span asp-validation-for="Team_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tier_Conquest" class="control-label"></label>
+                <input asp-for="Tier_Conquest" class="form-control" />
+                <span asp-validation-for="Tier_Conquest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tier_Duel" class="control-label"></label>
+                <input asp-for="Tier_Duel" class="form-control" />
+                <span asp-validation-for="Tier_Duel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tier_Joust" class="control-label"></label>
+                <input asp-for="Tier_Joust" class="form-control" />
+                <span asp-validation-for="Tier_Joust" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_Achievements" class="control-label"></label>
+                <input asp-for="Total_Achievements" class="form-control" />
+                <span asp-validation-for="Total_Achievements" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_Worshippers" class="control-label"></label>
+                <input asp-for="Total_Worshippers" class="form-control" />
+                <span asp-validation-for="Total_Worshippers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wins" class="control-label"></label>
+                <input asp-for="Wins" class="form-control" />
+                <span asp-validation-for="Wins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hz_gamer_tag" class="control-label"></label>
+                <input asp-for="hz_gamer_tag" class="form-control" />
+                <span asp-validation-for="hz_gamer_tag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hz_player_name" class="control-label"></label>
+                <input asp-for="hz_player_name" class="form-control" />
+                <span asp-validation-for="hz_player_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
