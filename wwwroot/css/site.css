@@ -8,6 +8,15 @@ header {
     z-index: 9;
 }
 
+table, th, tr, h2, h1 {
+    color: white
+}
+
+.jumbotron {
+    margin-bottom: 0!important;
+    background-color: inherit;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -41,41 +50,254 @@ a {
   border-color: #1861ac;
 }
 
-.card-deck .card:hover .card-img-top {
-    opacity: 1;
-}
-
-.card-deck .card-body {
-    height: 100px;
-    font-family: 'Nunito', sans-serif;
-    background: #fbfafd;
-}
-
-.card-deck .card-img-top {
-    height: 200px;
-    width: auto;
-    vertical-align: bottom;
-    opacity: .8;
-}
-
-.modal .card-img-top {
-    height: 500px;
-    vertical-align: bottom;
-}
-
-.card-deck .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+.card-img {
+    width: inherit;
+    height: inherit;
 }
 
 .border-dark {
-    min-width: auto !important;
+    padding-left: 0;
 }
 
-.row {
-    padding-bottom: 2em;
+.no-gutters {
+    height: auto;
 }
 
+.ability-icon {
+    float: left;
+    padding: 10px;
+}
+/*player summary circles*/
+.fancy {
+    text-align: center;
+    padding: 1em;
+    border: 0.5em solid black;
+    width: 4em;
+    height: 4em;
+    border-radius: 100%;
+    color: white;
+}
+
+
+/*search bar styling*/
+.player-search {
+    width: inherit !important;
+    display: flex !important;
+}
+
+.search {
+    width: 100%;
+    margin: 2em;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #ffca28;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #ffca28;
+}
+
+.searchTerm:focus {
+    color: black;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ffca28;
+    background: #ffca28;
+    text-align: center;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.wrap {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Popover styling*/
+.popover {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+    color: white;
+    display: none;
+    width: 250px !important;
+    padding: 1px;
+    text-align: left;
+    white-space: normal;
+    background-color: #2a4254 !important;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 0px !important;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+    .popover.left {
+        margin-left: -10px;
+    }
+
+    .popover > .arrow,
+    .popover > .arrow:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+    }
+
+    .popover > .arrow {
+        border-width: 11px;
+    }
+
+    .popover > .arrow:after {
+        content: "";
+        border-width: 10px;
+    }
+
+    .popover.left > .arrow {
+        top: 50%;
+        right: -11px;
+        margin-top: -11px;
+        border-right-width: 0;
+        border-left-color: #999;
+        border-left-color: rgba(0, 0, 0, .25);
+    }
+
+    .popover.left > .arrow:after {
+        right: 1px;
+        bottom: -10px;
+        content: " ";
+        border-right-width: 0;
+        border-left-color: #2a4254;
+    }
+
+/*gods table styling*/
+
+body {
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 1.5em;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.table-users {
+    max-width: calc(100% - 2em);
+    margin: 1em auto;
+    overflow: hidden;
+    width: 800px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+
+    font-size: 0.95em;
+    line-height: 1.4;
+    text-align: left;
+}
+
+}
+
+th {
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 700px) {
+    table, tr, td {
+        display: block;
+    }
+
+    td {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+tr {
+    padding: 0;
+    position: relative;
+
+
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .header {
+        background-color: transparent;
+        font-size: 2em;
+        font-weight: 700;
+        padding: 0;
+        text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    }
+
+    img {
+        border: 3px solid;
+        margin: 0.5rem 0;
+    }
+
+    td {
+
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    width: 100%;
+}
+
+
+
+}
+
+tr {
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.table-users {
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+}
 
 
 /* Sticky footer styles
@@ -113,8 +335,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #112031;
 }
 .footer {
   position: absolute;

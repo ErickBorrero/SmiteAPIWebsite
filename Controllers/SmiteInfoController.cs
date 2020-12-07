@@ -8,6 +8,13 @@ namespace SmiteAPIWebsite
 {
     public class Smite
     {
+        public static string previousName = "";
+        public static List<PlayerInfo> player;
+        public static List<GodRanks> playerGodRanks;
+        public static List<MatchHistory> playerMatchHistory;
+        public static List<MatchDetails> matchDetails;
+        public static List<PlayerQueueStats> playerRankedConquest;
+
         public static List<Gods> gods = ApiCall.GetGodsInfo();
 
         public static List<ItemsInfo> items = ApiCall.GetItems();

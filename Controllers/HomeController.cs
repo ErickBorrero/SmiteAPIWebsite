@@ -38,7 +38,29 @@ namespace SmiteAPIWebsite.Controllers
             return View();
         }
 
-        public IActionResult PlayerSummary()
+        public IActionResult PlayerSummary(string playerToSearch)
+        {
+            ApiCall.CreateSession();
+            Smite.previousName = playerToSearch;
+            Smite.player = ApiCall.GetPlayerInfo(playerToSearch);
+            Smite.playerGodRanks = ApiCall.GetGodRanks(playerToSearch);
+            Smite.playerMatchHistory = ApiCall.GetMatchHistory(playerToSearch);
+            Smite.playerRankedConquest = ApiCall.GetPlayerQueueStats(playerToSearch, "504");
+
+            return View();
+        }
+
+        public IActionResult Ranked()
+        {
+            return View();
+        }
+
+        public IActionResult MatchHistory()
+        {
+            return View();
+        }
+
+        public IActionResult GodRanks()
         {
             return View();
         }

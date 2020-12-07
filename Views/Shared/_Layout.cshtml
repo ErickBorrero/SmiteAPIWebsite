@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SmiteAPIWebsite</title>
+    <link rel="stylesheet" href="~/js/popper.js" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+
 </head>
 <body>
     <header>
@@ -30,14 +34,28 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Items">Items</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PlayerSummary">Player</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+    <div class="jumbotron jumbotron-fluid">
+        <div id="background"> </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center">
+                <div class="wrap">
+                    <div class="search">
+                        <form method="post" asp-controller="Home" asp-action="PlayerSummary" class="player-search">
+                            <input type="" class="searchTerm" name="playerToSearch" placeholder="Enter player name or Gamertag">
+                            <button type="submit" class="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -52,6 +70,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        $(function () {
+            $("[data-toggle='popover'").popover();
+        })
+    </script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

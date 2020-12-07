@@ -167,7 +167,7 @@ namespace SmiteAPIWebsite
 
         }
 
-        public static void GetPlayerInfo(string playerName)
+        public static List<PlayerInfo> GetPlayerInfo(string playerName)
         {
             string playerId = SearchPlayer(playerName);
 
@@ -179,7 +179,7 @@ namespace SmiteAPIWebsite
             {
                 web.Encoding = System.Text.Encoding.UTF8;
                 var jsonString = jsonInfo;
-                var playerInfo = JsonSerializer.Deserialize<List<PlayerInfo>>(jsonString);
+                return JsonSerializer.Deserialize<List<PlayerInfo>>(jsonString);
             }
 
         }
@@ -198,7 +198,7 @@ namespace SmiteAPIWebsite
             }
         }
 
-        public static void GetPlayerQueueStats(string playerName, string queue)
+        public static List<PlayerQueueStats> GetPlayerQueueStats(string playerName, string queue)
         {
             string playerId = SearchPlayer(playerName);
 
@@ -220,11 +220,11 @@ namespace SmiteAPIWebsite
             {
                 web.Encoding = System.Text.Encoding.UTF8;
                 var jsonString = jsonInfo;
-                var playerInfo = JsonSerializer.Deserialize<List<PlayerQueueStats>>(jsonString);
+                return JsonSerializer.Deserialize<List<PlayerQueueStats>>(jsonString);
             }
         }
 
-        public static void GetMatchHistory(string playerName)
+        public static List<MatchHistory> GetMatchHistory(string playerName)
         {
             string playerId = SearchPlayer(playerName);
 
@@ -234,12 +234,11 @@ namespace SmiteAPIWebsite
             {
                 web.Encoding = System.Text.Encoding.UTF8;
                 var jsonString = jsonInfo;
-                var playerMatchHistory = JsonSerializer.Deserialize<List<MatchHistory>>(jsonString);
-
+                return JsonSerializer.Deserialize<List<MatchHistory>>(jsonString);
             }
         }
 
-        public static void GetMatchDetails(string matchId)
+        public static List<MatchDetails> GetMatchDetails(string matchId)
         {
             string jsonInfo = ApiCallWithId("getmatchdetails", matchId);
 
@@ -247,12 +246,12 @@ namespace SmiteAPIWebsite
             {
                 web.Encoding = System.Text.Encoding.UTF8;
                 var jsonString = jsonInfo;
-                var playerMatchHistory = JsonSerializer.Deserialize<List<MatchDetails>>(jsonString);
+                return JsonSerializer.Deserialize<List<MatchDetails>>(jsonString);
 
             }
         }
 
-        public static void GetGodRanks(string playerName)
+        public static List<GodRanks> GetGodRanks(string playerName)
         {
             string playerId = SearchPlayer(playerName);
 
@@ -262,7 +261,7 @@ namespace SmiteAPIWebsite
             {
                 web.Encoding = System.Text.Encoding.UTF8;
                 var jsonString = jsonInfo;
-                var playerInfo = JsonSerializer.Deserialize<List<GodRanks>>(jsonString);
+                return JsonSerializer.Deserialize<List<GodRanks>>(jsonString);
             }
         }
 

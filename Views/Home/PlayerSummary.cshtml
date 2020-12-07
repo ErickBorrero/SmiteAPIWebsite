@@ -4,179 +4,248 @@
     ViewData["Title"] = "View";
 }
 
-<h1>View</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Dashboard Template · Bootstrap</title>
 
-<h4>PlayerInfo</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="PlayerSummary">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ActivePlayerId" class="control-label"></label>
-                <input asp-for="ActivePlayerId" class="form-control" />
-                <span asp-validation-for="ActivePlayerId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Avatar_URL" class="control-label"></label>
-                <input asp-for="Avatar_URL" class="form-control" />
-                <span asp-validation-for="Avatar_URL" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Created_Datetime" class="control-label"></label>
-                <input asp-for="Created_Datetime" class="form-control" />
-                <span asp-validation-for="Created_Datetime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HoursPlayed" class="control-label"></label>
-                <input asp-for="HoursPlayed" class="form-control" />
-                <span asp-validation-for="HoursPlayed" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Id" class="control-label"></label>
-                <input asp-for="Id" class="form-control" />
-                <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Last_Login_Datetime" class="control-label"></label>
-                <input asp-for="Last_Login_Datetime" class="form-control" />
-                <span asp-validation-for="Last_Login_Datetime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Leaves" class="control-label"></label>
-                <input asp-for="Leaves" class="form-control" />
-                <span asp-validation-for="Leaves" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Level" class="control-label"></label>
-                <input asp-for="Level" class="form-control" />
-                <span asp-validation-for="Level" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Losses" class="control-label"></label>
-                <input asp-for="Losses" class="form-control" />
-                <span asp-validation-for="Losses" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MasteryLevel" class="control-label"></label>
-                <input asp-for="MasteryLevel" class="form-control" />
-                <span asp-validation-for="MasteryLevel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MinutesPlayed" class="control-label"></label>
-                <input asp-for="MinutesPlayed" class="form-control" />
-                <span asp-validation-for="MinutesPlayed" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Personal_Status_Message" class="control-label"></label>
-                <input asp-for="Personal_Status_Message" class="form-control" />
-                <span asp-validation-for="Personal_Status_Message" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Platform" class="control-label"></label>
-                <input asp-for="Platform" class="form-control" />
-                <span asp-validation-for="Platform" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rank_Stat_Conquest" class="control-label"></label>
-                <input asp-for="Rank_Stat_Conquest" class="form-control" />
-                <span asp-validation-for="Rank_Stat_Conquest" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rank_Stat_Conquest_Controller" class="control-label"></label>
-                <input asp-for="Rank_Stat_Conquest_Controller" class="form-control" />
-                <span asp-validation-for="Rank_Stat_Conquest_Controller" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rank_Stat_Duel" class="control-label"></label>
-                <input asp-for="Rank_Stat_Duel" class="form-control" />
-                <span asp-validation-for="Rank_Stat_Duel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rank_Stat_Duel_Controller" class="control-label"></label>
-                <input asp-for="Rank_Stat_Duel_Controller" class="form-control" />
-                <span asp-validation-for="Rank_Stat_Duel_Controller" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rank_Stat_Joust" class="control-label"></label>
-                <input asp-for="Rank_Stat_Joust" class="form-control" />
-                <span asp-validation-for="Rank_Stat_Joust" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Rank_Stat_Joust_Controller" class="control-label"></label>
-                <input asp-for="Rank_Stat_Joust_Controller" class="form-control" />
-                <span asp-validation-for="Rank_Stat_Joust_Controller" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Region" class="control-label"></label>
-                <input asp-for="Region" class="form-control" />
-                <span asp-validation-for="Region" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TeamId" class="control-label"></label>
-                <input asp-for="TeamId" class="form-control" />
-                <span asp-validation-for="TeamId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Team_Name" class="control-label"></label>
-                <input asp-for="Team_Name" class="form-control" />
-                <span asp-validation-for="Team_Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tier_Conquest" class="control-label"></label>
-                <input asp-for="Tier_Conquest" class="form-control" />
-                <span asp-validation-for="Tier_Conquest" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tier_Duel" class="control-label"></label>
-                <input asp-for="Tier_Duel" class="form-control" />
-                <span asp-validation-for="Tier_Duel" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Tier_Joust" class="control-label"></label>
-                <input asp-for="Tier_Joust" class="form-control" />
-                <span asp-validation-for="Tier_Joust" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Total_Achievements" class="control-label"></label>
-                <input asp-for="Total_Achievements" class="form-control" />
-                <span asp-validation-for="Total_Achievements" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Total_Worshippers" class="control-label"></label>
-                <input asp-for="Total_Worshippers" class="form-control" />
-                <span asp-validation-for="Total_Worshippers" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Wins" class="control-label"></label>
-                <input asp-for="Wins" class="form-control" />
-                <span asp-validation-for="Wins" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="hz_gamer_tag" class="control-label"></label>
-                <input asp-for="hz_gamer_tag" class="form-control" />
-                <span asp-validation-for="hz_gamer_tag" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="hz_player_name" class="control-label"></label>
-                <input asp-for="hz_player_name" class="form-control" />
-                <span asp-validation-for="hz_player_name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">@Smite.player[0].Name</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="sidebar-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <form method="post" asp-controller="Home" asp-action="PlayerSummary">
+                                <input type="text" value="@Smite.previousName" name="playerToSearch" hidden/>
+                                <button type="submit" class="btn btn-outline-primary">Summary</button>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Ranked">
+                                <span data-feather="file"></span>
+                                Ranked
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="MatchHistory">
+                                <span data-feather="shopping-cart"></span>
+                                Match History
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="GodRanks">
+                                <span data-feather="users"></span>
+                                Gods
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Summary</h1>
+                </div>
+                <div class="row summary-stats">
+                    <div class="col-xl-3 col-sm-6 col-12 mb-3 account-created">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-hourglass-start primary font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="primary">@Smite.player[0].Created_Datetime</h3>
+                                            <span>Account Created</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 last-login">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-hourglass-end primary font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="primary">@Smite.player[0].Last_Login_Datetime</h3>
+                                            <span>Last Login</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-clock-o info font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="info">@Smite.player[0].HoursPlayed</h3>
+                                            <span>Hours Played</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-line-chart warning font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="warning">@Smite.player[0].Level</h3>
+                                            <span>Level</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-check-square-o success font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="success">@Smite.player[0].Wins</h3>
+                                            <span>Wins</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-minus-square-o danger font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="danger">@Smite.player[0].Losses</h3>
+                                            <span>Losses</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <i class="fa fa-university warning font-large-2 float-left"></i>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <h3 class="warning">@Smite.player[0].MasteryLevel</h3>
+                                            <span>Gods Mastered</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">Top 5 Gods(All Queues)</h1>
+                    </div>
+                    <div class="table-users">
+                        <table cellspacing="0">
+                            <tr>
+                                <th></th>
+                                <th>God</th>
+                                <th>Kills</th>
+                                <th>Deaths</th>
+                                <th>Assists</th>
+                                <th>Wins</th>
+                                <th>Losses</th>
+                                <th>Rank</th>
+                                <th>Worshippers</th>
+                            </tr>
+                            @for (int i = 0; i <= 4; i++)
+                            {
+                                <tr>
+                                    <td><img src="@Smite.godsDictionary[Smite.playerGodRanks[i].god].godIcon_URL" alt="" /></td>
+                                    <td>@Smite.playerGodRanks[i].god</td>
+                                    <td>@Smite.playerGodRanks[i].Kills</td>
+                                    <td>@Smite.playerGodRanks[i].Deaths</td>
+                                    <td>@Smite.playerGodRanks[i].Assists</td>
+                                    <td>@Smite.playerGodRanks[i].Wins</td>
+                                    <td>@Smite.playerGodRanks[i].Losses</td>
+                                    <td>@Smite.playerGodRanks[i].Rank</td>
+                                    <td>@Smite.playerGodRanks[i].Worshippers</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+
+</main>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

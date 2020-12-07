@@ -4,16 +4,94 @@
     ViewData["Title"] = "Gods";
 }
 
-<h1>Gods</h1>
 
-<div class="card-deck">
-    @foreach (var god in Smite.gods)
-    {
-        <div class="card border-dark mb-3">
-            <img class="card-img-top" src="@god.godCard_URL" />
-            <div class="card-body">
-                <h5 class="card-title">@god.Name</h5>
+<h1>Gods</h1>
+<div class="container-fluid">
+    <div class="row">
+        @foreach (var god in Smite.gods)
+        {
+            <div class="card border-dark mb-3 col-md-6" data-toggle="popover" data-trigger="hover" title="@god.Title" data-placement="right" data-html="true" data-content="Role: @god.Roles<br>Pantheon: @god.Pantheon<br> Pros: @god.Pros">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img class="card-img img-fluid" src="@god.godCard_URL" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@god.Name</h5>
+                            <div class="row">
+                                <div class="ability1-ability2 col-md-6">
+                                    <div class="row no-gutters justify-content-between">
+                                        <div class="col-sm-4">
+                                            <img class="ability-icon" src="@god.godAbility1_URL" />
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <p class="card-text">
+                                                <h6 class="card-title">@god.Ability1</h6>
+                                                Cooldown: @god.abilityDescription1.itemDescription.cooldown<br />
+                                                Cost: @god.abilityDescription1.itemDescription.cost &emsp;
+                                                @*                                Damage: @god.Ability_1.Description.itemDescription.rankitems[0].value
+                                                *@
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters justify-content-between">
+                                        <div class="col-sm-4">
+                                            <img class="ability-icon" src="@god.godAbility2_URL" />
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <p class="card-text">
+                                                <h6 class="card-title">@god.Ability2</h6>
+                                                Cooldown: @god.abilityDescription2.itemDescription.cooldown<br />
+                                                Cost: @god.abilityDescription2.itemDescription.cost &emsp;
+                                                @*                                Damage: @god.Ability_1.Description.itemDescription.rankitems[0].value
+                                                *@
+                                            </p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="ability3-ability4 col-md-6">
+                                        <div class="row no-gutters justify-content-between">
+                                            <div class="col-sm-4">
+                                                <img class="ability-icon" src="@god.godAbility3_URL" />
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <p class="card-text">
+                                                    <h6 class="card-title">@god.Ability3</h6>
+                                                    Cooldown: @god.abilityDescription3.itemDescription.cooldown<br />
+                                                    Cost: @god.abilityDescription3.itemDescription.cost &emsp;
+                                                    @*                                Damage: @god.Ability_1.Description.itemDescription.rankitems[0].value
+                                                    *@
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row no-gutters justify-content-between">
+                                            <div class="col-sm-4">
+                                                <img class="ability-icon" src="@god.godAbility4_URL" />
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <p class="card-text">
+                                                    <h6 class="card-title">@god.Ability4</h6>
+                                                    Cooldown: @god.abilityDescription4.itemDescription.cooldown<br />
+                                                    Cost: @god.abilityDescription4.itemDescription.cost &emsp;
+                                                    @*                                Damage: @god.Ability_1.Description.itemDescription.rankitems[0].value
+                                                    *@
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @*<img id="ability-icon" src="@god.godAbility5_URL" />
+                            <p class="card-text">
+                                <h6 class="card-title">@god.Ability5</h6>
+                                Cooldown: @god.abilityDescription5.itemDescription.cooldown<br />
+                                Cost: @god.abilityDescription5.itemDescription.cost &emsp;
+                                Damage: @god.Ability_5.Description.itemDescription.rankitems[0].value
+                            </p>*@
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
