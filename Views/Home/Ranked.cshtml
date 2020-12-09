@@ -120,74 +120,94 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xl-3 col-sm-6 col-12">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div class="media d-flex">
-                                        <div class="align-self-center">
-                                            <i class="fa fa-line-chart warning font-large-2 float-left"></i>
-                                        </div>
-                                        <div class="media-body text-right">
-                                            <h3 class="warning">@Smite.player[0].Level</h3>
-                                            <span>Level</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="ranked-table">
+                    <h1>Conquest</h1>
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Matches</th>
+                                    <th>Wins</th>
+                                    <th>Losses</th>
+                                    <th>Tier</th>
+                                    <th>TP</th>
+                                    <th>Variance</th>
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
-                    <div class="col-xl-3 col-sm-6 col-12">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div class="media d-flex">
-                                        <div class="align-self-center">
-                                            <i class="fa fa-check-square-o success font-large-2 float-left"></i>
-                                        </div>
-                                        <div class="media-body text-right">
-                                            <h3 class="success">@Smite.player[0].Wins</h3>
-                                            <span>Wins</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td>@(Smite.player[0].RankedConquestController.Wins + Smite.player[0].RankedConquestController.Losses)</td>
+                                    <td>@Smite.player[0].RankedConquestController.Wins</td>
+                                    <td>@Smite.player[0].RankedConquestController.Losses</td>
+                                    <td>@Smite.player[0].RankedConquestController.Trend</td>
+                                    <td>@Smite.player[0].RankedConquestController.Points</td>
+                                    <td>@Smite.player[0].RankedConquestController.Rank_Variance</td>
+                                </tr>
+                        </table>
                     </div>
-                    <div class="col-xl-3 col-sm-6 col-12">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div class="media d-flex">
-                                        <div class="align-self-center">
-                                            <i class="fa fa-minus-square-o danger font-large-2 float-left"></i>
-                                        </div>
-                                        <div class="media-body text-right">
-                                            <h3 class="danger">@Smite.player[0].Losses</h3>
-                                            <span>Losses</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                <div class="ranked-table">
+                    <h1>Joust</h1>
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Matches</th>
+                                    <th>Wins</th>
+                                    <th>Losses</th>
+                                    <th>Tier</th>
+                                    <th>TP</th>
+                                    <th>Variance</th>
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
-                    <div class="col-xl-3 col-sm-6 col-12">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="card-body">
-                                    <div class="media d-flex">
-                                        <div class="align-self-center">
-                                            <i class="fa fa-university warning font-large-2 float-left"></i>
-                                        </div>
-                                        <div class="media-body text-right">
-                                            <h3 class="warning">@Smite.player[0].MasteryLevel</h3>
-                                            <span>Gods Mastered</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td>@(Smite.player[0].RankedJoustController.Wins + Smite.player[0].RankedJoustController.Losses)</td>
+                                    <td>@Smite.player[0].RankedJoustController.Wins</td>
+                                    <td>@Smite.player[0].RankedJoustController.Losses</td>
+                                    <td>@Smite.player[0].RankedJoustController.Trend</td>
+                                    <td>@Smite.player[0].RankedJoustController.Points</td>
+                                    <td>@Smite.player[0].RankedJoustController.Rank_Variance</td>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="ranked-table">
+                    <h1>Duel</h1>
+                    <div class="tbl-header">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <thead>
+                                <tr>
+                                    <th>Matches</th>
+                                    <th>Wins</th>
+                                    <th>Losses</th>
+                                    <th>Tier</th>
+                                    <th>TP</th>
+                                    <th>Variance</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tbl-content">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td>@(Smite.player[0].RankedDuelController.Wins + Smite.player[0].RankedDuelController.Losses)</td>
+                                    <td>@Smite.player[0].RankedDuelController.Wins</td>
+                                    <td>@Smite.player[0].RankedDuelController.Losses</td>
+                                    <td>@Smite.player[0].RankedDuelController.Trend</td>
+                                    <td>@Smite.player[0].RankedDuelController.Points</td>
+                                    <td>@Smite.player[0].RankedDuelController.Rank_Variance</td>
+                                </tr>
+                        </table>
                     </div>
                 </div>
 
