@@ -19,9 +19,9 @@ namespace SmiteAPIWebsite
 
         public static List<ItemsInfo> items = ApiCall.GetItems();
 
-        public static Dictionary<string, Gods> godsDictionary = ApiCall.GetGodsInfo().ToDictionary(god => god.Name, god => god);
+        public static Dictionary<string, Gods> godsDictionary = ApiCall.GetGodsInfo().ToDictionary(god => god.Name, god => god, StringComparer.OrdinalIgnoreCase);
 
-        /*public static Dictionary<string, ItemsInfo> itemsDictionary = ApiCall.GetItems().ToDictionary(item => item.DeviceName, item => item);*/
+        public static Dictionary<string, ItemsInfo> itemsDictionary = ApiCall.GetItems().GroupBy(i => i.DeviceName).ToDictionary(item => item.Key, item => item.First(), StringComparer.OrdinalIgnoreCase);
 
     }
 }
