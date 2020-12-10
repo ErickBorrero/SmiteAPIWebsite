@@ -215,7 +215,7 @@
                             @for (int i = 0; i <= 4; i++)
                             {
                                 <tr>
-                                    <td><img src="@Smite.godsDictionary[Smite.playerGodRanks[i].god].godIcon_URL" alt="" /></td>
+                                    <td><img src="@Smite.godsDictionary[Smite.playerGodRanks[i].god.Replace("'", "")].godIcon_URL" alt="" /></td>
                                     <td>@Smite.playerGodRanks[i].god</td>
                                     <td>@Smite.playerGodRanks[i].Kills</td>
                                     <td>@Smite.playerGodRanks[i].Deaths</td>
