@@ -41,10 +41,10 @@
                 <div class="sidebar-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" asp-controller="Home" asp-action="PlayerSummary">
-                                <span data-feather="home"></span>
-                                Summary <span class="sr-only">(current)</span>
-                            </a>
+                            <form method="post" asp-controller="Home" asp-action="PlayerSummary">
+                                <input type="text" value="@Smite.previousName" name="playerToSearch" hidden />
+                                <button type="submit" class="btn btn-link">Summary</button>
+                            </form>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="Ranked">
@@ -58,12 +58,6 @@
                                 Match History
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="GodRanks">
-                                <span data-feather="users"></span>
-                                Gods
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </nav>
@@ -72,14 +66,17 @@
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Match History</h1>
                 </div>
-                @foreach(var match in Smite.playerMatchHistory)
+                @foreach (var match in Smite.playerMatchHistory)
                 {
+                    string result = Smite.CheckResult(match);
+                    
+
                     <div class="ranked-table">
                         <h1>@match.Queue @match.Match_Time</h1>
                         <div class="tbl-header">
-                            <table cellpadding="0" cellspacing="0" border="0">
+                            <table cellpadding="0" cellspacing="0" border="0"  class="match-build">
                                 <thead>
-                                    <tr>
+                                    <tr class="@result">
                                         <th>God</th>
                                         <th>Active 1</th>
                                         <th>Active 2</th>
@@ -96,7 +93,7 @@
                         <div class="tbl-content">
                             <table cellpadding="0" cellspacing="0" border="0">
                                 <tbody>
-                                    <tr>
+                                    <tr class="@result">
                                         <td><img src="@Smite.godsDictionary[match.God.Replace("_", " ")].godIcon_URL" title="@Smite.godsDictionary[match.God.Replace("_", " ")].Name"></td>
                                         <td><img src="@Smite.itemsDictionary[match.Active_1].itemIcon_URL" title="@match.Active_1"></td>
                                         <td><img src="@Smite.itemsDictionary[match.Active_2].itemIcon_URL" title="@match.Active_2"></td>
@@ -106,6 +103,43 @@
                                         <td><img src="@if (match.Item_4 != "") {@Smite.itemsDictionary[match.Item_4].itemIcon_URL}" title="@match.Item_4"></td>
                                         <td><img src="@if (match.Item_5 != "") {@Smite.itemsDictionary[match.Item_5].itemIcon_URL}" title="@match.Item_5"></td>
                                         <td><img src="@if (match.Item_6 != "") {@Smite.itemsDictionary[match.Item_6].itemIcon_URL}" title="@match.Item_6"></td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="ranked-table">
+                        <div class="tbl-header">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <thead>
+                                    <tr>
+                                        <th>Kills</th>
+                                        <th>Deaths</th>
+                                        <th>Assists</th>
+                                        <th>Damage Dealt</th>
+                                        <th>Damage Taken</th>
+                                        <th>Damage Mitigated</th>
+                                        <th>Structure Damage</th>
+                                        <th>Total Healing</th>
+                                        <th>Total Self Healing</th>
+                                        <th>Game Length</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="tbl-content">
+                            <table cellpadding="0" cellspacing="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td>@match.Kills</td>
+                                        <td>@match.Deaths</td>
+                                        <td>@match.Assists</td>
+                                        <td>@match.Damage</td>
+                                        <td>@match.Damage_Taken</td>
+                                        <td>@match.Damage_Mitigated</td>
+                                        <td>@match.Damage_Structure</td>
+                                        <td>@match.Healing</td>
+                                        <td>@match.Healing_Player_Self</td>
+                                        <td>@match.Minutes</td>
                                     </tr>
                             </table>
                         </div>

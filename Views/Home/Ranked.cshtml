@@ -43,7 +43,7 @@
                         <li class="nav-item">
                             <form method="post" asp-controller="Home" asp-action="PlayerSummary">
                                 <input type="text" value="@Smite.previousName" name="playerToSearch" hidden />
-                                <button type="submit" class="btn btn-outline-primary">Summary</button>
+                                <button type="submit" class="btn btn-link">Summary</button>
                             </form>
                         </li>
                         <li class="nav-item">
@@ -74,7 +74,7 @@
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="align-self-center">
-                                            <i class="fa fa-hourglass-start primary font-large-2 float-left"></i>
+                                            <i class="fa fa-users primary font-large-2 float-left"></i>
                                         </div>
                                         <div class="media-body text-right">
                                             <h3 class="primary">@Smite.player[0].Rank_Stat_Conquest_Controller</h3>
@@ -91,7 +91,7 @@
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="align-self-center">
-                                            <i class="fa fa-hourglass-end primary font-large-2 float-left"></i>
+                                            <i class="fa fa-sign-language primary font-large-2 float-left"></i>
                                         </div>
                                         <div class="media-body text-right">
                                             <h3 class="primary">@Smite.player[0].Rank_Stat_Joust_Controller</h3>
@@ -108,7 +108,7 @@
                                 <div class="card-body">
                                     <div class="media d-flex">
                                         <div class="align-self-center">
-                                            <i class="fa fa-clock-o info font-large-2 float-left"></i>
+                                            <i class="fa fa fa-balance-scale info font-large-2 float-left"></i>
                                         </div>
                                         <div class="media-body text-right">
                                             <h3 class="info">@Smite.player[0].Rank_Stat_Duel_Controller</h3>

@@ -15,7 +15,7 @@ namespace SmiteAPIWebsite
         public static List<MatchDetails> matchDetails;
         public static List<PlayerQueueStats> playerRankedConquest;
 
-        public static bool isActive = ApiCall.TestSession();
+        public static bool isActive;
 
         public static List<Gods> gods = ApiCall.GetGodsInfo();
 
@@ -24,6 +24,16 @@ namespace SmiteAPIWebsite
         public static Dictionary<string, Gods> godsDictionary = ApiCall.GetGodsInfo().ToDictionary(god => god.Name.Replace("'", ""), god => god, StringComparer.OrdinalIgnoreCase);
 
         public static Dictionary<string, ItemsInfo> itemsDictionary = ApiCall.GetItems().GroupBy(i => i.DeviceName).ToDictionary(item => item.Key, item => item.First(), StringComparer.OrdinalIgnoreCase);
+
+        public static string CheckResult(MatchHistory match)
+        {
+            if(match.Win_Status == "Loss")
+            {
+                return "table-danger";
+            }
+
+            return "table-success";
+        }
 
         public static void TestServer()
         {

@@ -38,6 +38,19 @@ a {
     
 }
 
+.btn-link {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+.btn-link:focus {
+    text-decoration: none;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -223,7 +236,7 @@ td {
     text-align: left;
 }
 
-}
+
 
 th {
     font-weight: 300;
@@ -396,4 +409,50 @@ body {
     width: 128px;
     height: 128px;
     object-fit: cover;
+}
+
+/*match history table styling*/
+.card-img-top {
+    border-radius: 0;
+}
+.match-build th {
+    color: black;
+}
+
+/*items page styling*/
+.card-columns .card:hover .card-img-top {
+    opacity: 1;
+    -webkit-transform-style: preserve-3d;
+}
+
+.card-columns .card-body {
+    height: 100px;
+    font-family: 'Nunito', sans-serif;
+    background: #fbfafd;
+}
+
+.card-columns .card-img-top {
+    height: 128px;
+    width: 128px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.modal .card-img-top {
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.card-columns .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+}
+
+.card-footer {
+    background: #fbfafd;
 }

@@ -49,8 +49,8 @@
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <form method="post" asp-controller="Home" asp-action="PlayerSummary">
-                                <input type="text" value="@Smite.previousName" name="playerToSearch" hidden/>
-                                <button type="submit" class="btn btn-outline-primary">Summary</button>
+                                <input type="text" value="@Smite.previousName.ToString()" name="playerToSearch" hidden/>
+                                <button type="submit" class="btn btn-link">Summary</button>
                             </form>
                         </li>
                         <li class="nav-item">
