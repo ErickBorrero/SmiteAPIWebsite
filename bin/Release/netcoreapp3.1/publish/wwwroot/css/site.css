@@ -12,6 +12,16 @@ table, th, tr, h2, h1 {
     color: white
 }
 
+ul {
+    list-style-type: none;
+}
+
+#page-logo {
+    height: auto;
+    width: 10vw;
+    border-radius: 0 !important;
+}
+
 .jumbotron {
     margin-bottom: 0!important;
     background-color: inherit;
@@ -33,9 +43,22 @@ a {
     background-position: left;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 30vw;
     width: 100vw;
     
+}
+
+.btn-link {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: none;
+}
+
+.btn-link:focus {
+    text-decoration: none;
 }
 
 .btn-primary {
@@ -124,67 +147,69 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/*Popover styling*/
-.popover {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 1060;
-    color: white;
-    display: none;
-    width: 250px !important;
-    padding: 1px;
-    text-align: left;
-    white-space: normal;
-    background-color: #2a4254 !important;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 0px !important;
-    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+/*console icons styling*/
+.console-icons {
+    margin-bottom: 2em;
 }
 
-    .popover.left {
-        margin-left: -10px;
-    }
+.console-icons img {
+    height: auto;
+    width: 20%;
+}
 
-    .popover > .arrow,
-    .popover > .arrow:after {
-        position: absolute;
-        display: block;
-        width: 0;
-        height: 0;
-        border-color: transparent;
-        border-style: solid;
-    }
+.steam-icon:hover {
+    color: #00adee;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
 
-    .popover > .arrow {
-        border-width: 11px;
-    }
+.steam-icon {
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: dimgrey;
+}
 
-    .popover > .arrow:after {
-        content: "";
-        border-width: 10px;
-    }
+.xbox-icon:hover {
+    color: #52b043;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
 
-    .popover.left > .arrow {
-        top: 50%;
-        right: -11px;
-        margin-top: -11px;
-        border-right-width: 0;
-        border-left-color: #999;
-        border-left-color: rgba(0, 0, 0, .25);
-    }
+.xbox-icon {
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: dimgrey;
+}
 
-    .popover.left > .arrow:after {
-        right: 1px;
-        bottom: -10px;
-        content: " ";
-        border-right-width: 0;
-        border-left-color: #2a4254;
-    }
+.playstation-icon:hover {
+    color: #000080;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.playstation-icon {
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: dimgrey;
+}
+
+.console-icons a {
+    color: inherit !important;
+}
+
 
 /*gods table styling*/
 
@@ -207,7 +232,7 @@ img {
     max-width: calc(100% - 2em);
     margin: 1em auto;
     overflow: hidden;
-    width: 800px;
+    width: 100%;
 }
 
 table {
@@ -223,7 +248,7 @@ td {
     text-align: left;
 }
 
-}
+
 
 th {
     font-weight: 300;
@@ -298,7 +323,6 @@ tr {
 }
 
 }
-
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -393,7 +417,59 @@ body {
 }
 
 .ranked-table img {
-    width: 128px;
-    height: 128px;
+    width: 7vw;
+    height: 7vw;
     object-fit: cover;
 }
+
+/*match history table styling*/
+.card-img-top {
+    border-radius: 0;
+}
+.match-build th {
+    color: black;
+}
+
+/*items page styling*/
+.card-columns .card:hover .card-img-top {
+    opacity: 1;
+    -webkit-transform-style: preserve-3d;
+}
+
+.card-columns .card-body {
+    height: 100px;
+    font-family: 'Nunito', sans-serif;
+    background: #fbfafd;
+}
+
+.card-columns .card-img-top {
+    height: 128px;
+    width: 128px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.modal .card-img-top {
+    height: 500px;
+    vertical-align: bottom;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.card-columns .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(37,33,82,.12), 0 4px 8px rgba(37,33,82,.06);
+}
+
+.card-footer {
+    background: #fbfafd;
+}
+
+.items-card {
+    height: auto;
+    width: 600px;
+}
+

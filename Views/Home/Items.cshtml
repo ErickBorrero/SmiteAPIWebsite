@@ -17,13 +17,16 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">@item.DeviceName</h5>
-                    <p>@item.ShortDesc</p>
-@*                        <p>@if (item.ItemDescription.SecondaryDescription == null || item.ItemDescription.SecondaryDescription == "") {@item.ShortDesc; } else { @item.ItemDescription.SecondaryDescription; }</p>
-*@                        <p>Tier: @item.ItemTier Price: @item.Price</p>
-@*                        <p>@foreach (var stat in item.ItemDescription.Menuitems) { stat.GetType().GetProperty("description").GetValue(stat, null); }</p>
-*@                    </div>
+                        <p>@item.ShortDesc</p>
+                        @*                        <p>@if (item.ItemDescription.SecondaryDescription == null || item.ItemDescription.SecondaryDescription == "") {@item.ShortDesc; } else { @item.ItemDescription.SecondaryDescription; }</p>
+                        *@                        <p>Tier: @item.ItemTier Price: @item.Price</p>
+                        @*                        <p>@foreach (var stat in item.ItemDescription.Menuitems) { stat.GetType().GetProperty("description").GetValue(stat, null); }</p>
+                        *@
+                    </div>
                 </div>
             </div>
         </div>
     }
+    <a href="~/js/site.js" id="return-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
 </div>

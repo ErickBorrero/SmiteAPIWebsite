@@ -15,16 +15,13 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SmiteAPIWebsite</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Images/SMITE Logo (With Tagline).png" id="page-logo"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Gods">Gods</a>
                         </li>
@@ -54,16 +51,16 @@
         </div>
     </div>
     <div class="row justify-content-center console-icons">
-        <div class=" col-md-2 d-flex justify-content-center steam-icon"><a href="https://archive.smitegame.com/store/" target="_blank"><i class="fab fa-steam fa-5x"></i></a></div>
-        <div class=" col-md-2 d-flex justify-content-center xbox-icon"><a href="https://www.microsoft.com/en-us/p/smite/c2mhs238pdns?rtc=1&activetab=pivot:overviewtab" target="_blank"><i class="fab fa-xbox fa-5x"></i></a></div>
-        <div class=" col-md-2 d-flex justify-content-center playstation-icon"><a href="https://store.playstation.com/en-us/product/UP0334-CUSA02328_00-SMITEXXXXXXXXXXX" target="_blank"><i class="fab fa-playstation fa-5x"></i></a></div>
+        <div class=" col-md-2 d-flex justify-content-center steam-icon"><a href="https://archive.smitegame.com/store/" target="_blank"><i class="fab fa-steam fa-3x"></i></a></div>
+        <div class=" col-md-2 d-flex justify-content-center xbox-icon"><a href="https://www.microsoft.com/en-us/p/smite/c2mhs238pdns?rtc=1&activetab=pivot:overviewtab" target="_blank"><i class="fab fa-xbox fa-3x"></i></a></div>
+        <div class=" col-md-2 d-flex justify-content-center playstation-icon"><a href="https://store.playstation.com/en-us/product/UP0334-CUSA02328_00-SMITEXXXXXXXXXXX" target="_blank"><i class="fab fa-playstation fa-3x"></i></a></div>
     </div>
+
     <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-    <a href="~/js/site.js" id="return-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     <footer class="border-top footer text-muted">
         <div class="container">

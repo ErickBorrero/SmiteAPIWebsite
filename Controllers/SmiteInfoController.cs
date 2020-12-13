@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ namespace SmiteAPIWebsite
 {
     public class Smite
     {
+        [StringLength(15)]
         public static string previousName = "";
         public static List<PlayerInfo> player;
         public static List<GodRanks> playerGodRanks;
@@ -44,6 +46,5 @@ namespace SmiteAPIWebsite
                 ApiCall.CreateSession();
             }
         }
-
     }
 }
