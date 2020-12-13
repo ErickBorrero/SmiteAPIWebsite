@@ -9,7 +9,7 @@
 <div class="card-columns">
     @foreach (var item in Smite.items)
     {
-        <div class="card border-dark mb-3">
+        <div class="card border-dark mb-3 items-card">
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img class="card-img-top" src="@item.itemIcon_URL" />
@@ -17,9 +17,11 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">@item.DeviceName</h5>
-                        <p>@item.ItemDescription.Description</p>
-                        <p>Price: @item.Price</p>
-                    </div>
+                    <p>@item.ShortDesc</p>
+@*                        <p>@if (item.ItemDescription.SecondaryDescription == null || item.ItemDescription.SecondaryDescription == "") {@item.ShortDesc; } else { @item.ItemDescription.SecondaryDescription; }</p>
+*@                        <p>Tier: @item.ItemTier Price: @item.Price</p>
+@*                        <p>@foreach (var stat in item.ItemDescription.Menuitems) { stat.GetType().GetProperty("description").GetValue(stat, null); }</p>
+*@                    </div>
                 </div>
             </div>
         </div>
