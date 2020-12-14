@@ -20,31 +20,27 @@ namespace SmiteAPIWebsite.Controllers
 
         public IActionResult Index()
         {
-            Smite.TestServer();
             return View();
         }
 
         public IActionResult Privacy()
         {
-            Smite.TestServer();
             return View();
         }
 
         public IActionResult Gods()
         {
-            Smite.TestServer();
             return View();
         }
 
         public IActionResult Items()
         {
-            Smite.TestServer();
             return View();
         }
 
         public IActionResult PlayerSummary(string playerToSearch)
         {
-            Smite.TestServer();
+            ApiCall.CreateSession();
             Smite.previousName = playerToSearch;
             Smite.player = ApiCall.GetPlayerInfo(playerToSearch);
             Smite.playerGodRanks = ApiCall.GetGodRanks(playerToSearch);
@@ -56,19 +52,16 @@ namespace SmiteAPIWebsite.Controllers
 
         public IActionResult Ranked()
         {
-            Smite.TestServer();
             return View();
         }
 
         public IActionResult MatchHistory()
         {
-            Smite.TestServer();
             return View();
         }
 
         public IActionResult GodRanks()
         {
-            Smite.TestServer();
             return View();
         }
 
