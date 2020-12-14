@@ -11,21 +11,26 @@ namespace SmiteAPIWebsite
     {
         [StringLength(15)]
         public static string previousName = "";
-        public static List<PlayerInfo> player;
-        public static List<GodRanks> playerGodRanks;
-        public static List<MatchHistory> playerMatchHistory;
-        public static List<MatchDetails> matchDetails;
-        public static List<PlayerQueueStats> playerRankedConquest;
 
         public static bool isActive;
 
-        public static List<Gods> gods = ApiCall.GetGodsInfo();
+        public static List<PlayerInfo> player;
 
-        public static List<ItemsInfo> items = ApiCall.GetItems();
+        public static List<GodRanks> playerGodRanks;
 
-        public static Dictionary<string, Gods> godsDictionary = ApiCall.GetGodsInfo().ToDictionary(god => god.Name.Replace("'", ""), god => god, StringComparer.OrdinalIgnoreCase);
+        public static List<MatchHistory> playerMatchHistory;
 
-        public static Dictionary<string, ItemsInfo> itemsDictionary = ApiCall.GetItems().GroupBy(i => i.DeviceName).ToDictionary(item => item.Key, item => item.First(), StringComparer.OrdinalIgnoreCase);
+        public static List<MatchDetails> matchDetails;
+
+        public static List<PlayerQueueStats> playerRankedConquest;
+
+        public static List<Gods> gods;
+
+        public static List<ItemsInfo> items;
+
+        public static Dictionary<string, Gods> godsDictionary;
+
+        public static Dictionary<string, ItemsInfo> itemsDictionary;
 
         public static string CheckResult(MatchHistory match)
         {

@@ -20,6 +20,18 @@ namespace SmiteAPIWebsite.Controllers
 
         public IActionResult Index()
         {
+            Dev.timeStamp = DateTime.UtcNow.ToString("yyyy" + "MM" + "dd" + "HH" + "mm" + "ss");
+
+            ApiCall.CreateSession();
+
+            Smite.gods = ApiCall.GetGodsInfo();
+
+            Smite.godsDictionary = ApiCall.GetGodsInfo().ToDictionary(god => god.Name.Replace("'", ""), god => god, StringComparer.OrdinalIgnoreCase);
+
+            Smite.items = ApiCall.GetItems();
+
+            Smite.itemsDictionary = ApiCall.GetItems().GroupBy(i => i.DeviceName).ToDictionary(item => item.Key, item => item.First(), StringComparer.OrdinalIgnoreCase);
+
             return View();
         }
 
@@ -40,11 +52,18 @@ namespace SmiteAPIWebsite.Controllers
 
         public IActionResult PlayerSummary(string playerToSearch)
         {
+            Dev.timeStamp = DateTime.UtcNow.ToString("yyyy" + "MM" + "dd" + "HH" + "mm" + "ss");
+
             ApiCall.CreateSession();
+
             Smite.previousName = playerToSearch;
+
             Smite.player = ApiCall.GetPlayerInfo(playerToSearch);
+
             Smite.playerGodRanks = ApiCall.GetGodRanks(playerToSearch);
+
             Smite.playerMatchHistory = ApiCall.GetMatchHistory(playerToSearch);
+
             Smite.playerRankedConquest = ApiCall.GetPlayerQueueStats(playerToSearch, "504");
 
             return View();
@@ -62,6 +81,7 @@ namespace SmiteAPIWebsite.Controllers
 
         public IActionResult GodRanks()
         {
+
             return View();
         }
 
