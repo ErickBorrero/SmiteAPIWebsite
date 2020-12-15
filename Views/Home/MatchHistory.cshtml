@@ -97,12 +97,12 @@
                                         <td><img src="@Smite.godsDictionary[match.God.Replace("_", " ")].godIcon_URL" title="@Smite.godsDictionary[match.God.Replace("_", " ")].Name"></td>
                                         <td><img src="@Smite.itemsDictionary[match.Active_1].itemIcon_URL" title="@match.Active_1"></td>
                                         <td><img src="@Smite.itemsDictionary[match.Active_2].itemIcon_URL" title="@match.Active_2"></td>
-                                        <td><img src="@if (match.Item_1 != "") {@Smite.itemsDictionary[match.Item_1].itemIcon_URL}" title="@match.Item_1"></td>
-                                        <td><img src="@if (match.Item_2 != "") {@Smite.itemsDictionary[match.Item_2].itemIcon_URL}" title="@match.Item_2"></td>
-                                        <td><img src="@if (match.Item_3 != "") {@Smite.itemsDictionary[match.Item_3].itemIcon_URL}" title="@match.Item_3"></td>
-                                        <td><img src="@if (match.Item_4 != "") {@Smite.itemsDictionary[match.Item_4].itemIcon_URL}" title="@match.Item_4"></td>
-                                        <td><img src="@if (match.Item_5 != "") {@Smite.itemsDictionary[match.Item_5].itemIcon_URL}" title="@match.Item_5"></td>
-                                        <td><img src="@if (match.Item_6 != "") {@Smite.itemsDictionary[match.Item_6].itemIcon_URL}" title="@match.Item_6"></td>
+                                        <td>@if (match.Item_1 != "") {<img src="@Smite.itemsDictionary[match.Item_1].itemIcon_URL"/>} else {<img src="/Images/smitebolt.png" title="lightning bolt">} </td>
+                                        <td>@if (match.Item_2 != "") {<img src="@Smite.itemsDictionary[match.Item_2].itemIcon_URL"/>} else {<img src="/Images/smitebolt.png" title="lightning bolt">}</td>
+                                        <td>@if (match.Item_3 != "") {<img src="@Smite.itemsDictionary[match.Item_3].itemIcon_URL"/>} else {<img src="/Images/smitebolt.png" title="lightning bolt">}</td>
+                                        <td>@if (match.Item_4 != "") {<img src="@Smite.itemsDictionary[match.Item_4].itemIcon_URL"/>} else {<img src="/Images/smitebolt.png" title="lightning bolt">}</td>
+                                        <td>@if (match.Item_5 != "") {<img src="@Smite.itemsDictionary[match.Item_5].itemIcon_URL"/>} else {<img src="/Images/smitebolt.png" title="lightning bolt">}</td>
+                                        <td>@if (match.Item_6 != "") {<img src="@Smite.itemsDictionary[match.Item_6].itemIcon_URL"/>} else {<img src="/Images/smitebolt.png" title="lightning bolt">}</td>
                                     </tr>
                             </table>
                         </div>
@@ -121,7 +121,7 @@
                                         <th>Structure Damage</th>
                                         <th>Total Healing</th>
                                         <th>Total Self Healing</th>
-                                        <th>Game Length</th>
+                                        <th>Game Length (Mins)</th>
                                     </tr>
                                 </thead>
                             </table>
